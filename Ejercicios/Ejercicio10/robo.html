@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Robo de bicicletas</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Ladrones de bicicletas</h1>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Momento del robo</legend>
+                    <div>
+                        <label for="fecha">Día: </label>
+                        <input type="date" id="fecha" name="fecha" tabindex="1" autofocus required>
+                    </div>
+                    <div>
+                        <label for="hora">Hora: </label>
+                        <input type="time" id="hora" name="hora" tabindex="2" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos de la bicicleta</legend>
+                    <div>
+                        <label for="color">Color: </label>
+                        <input type="color" id="color" name="color" tabindex="3" required>
+                    </div>
+                    <div>
+                        <label for="precio">Precio: </label>
+                        <input type="range" id="precio" name="precio" min="0" value="200" max="2000" step="10" tabindex="4" oninput="precio2.value=precio.value+'€'" required>
+                        <output id="precio2">200€</output>
+                    </div>
+                    <div>
+                        <label for="tipo">Tipo de bicicleta: </label>
+                        <select name="tipo" tabindex="5" required>
+                            <optgroup label="Paseo">
+                                <option value="senorial">Señorial</option>
+                                <option value="antiplebeyos">Anti-plebeyos</option>
+                                <option value="porencimadelhombro">PorEncimaDelHombro</option>
+                            </optgroup>
+                            <optgroup label="Montaña">
+                                <option value="gamusinos">Gamusinos</option>
+                                <option value="hueleflores">Hueleflores premium</option>
+                                <option value="fangolover">Fango lover</option>
+                            </optgroup>
+                            <optgroup label="Carreras">
+                                <option value="metroymedio">Metroymedio</option>
+                                <option value="fluorescente">3 de la tarde. Fluorescente edition</option>
+                                <option value="grupitors">Grupitors</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="accesorios">Accesorios: </label>
+                        <select name="accesorios" tabindex="6" multiple>
+                            <option value="ruedines">Ruedines</option>
+                            <option value="pegatinas">Pegatinas</option>
+                            <option value="cestita">Cestita</option>
+                            <option value="bombaaire">Bomba de aire</option>
+                            <option value="timbre">Timbre</option>
+                            <option value="foco">Foco</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="marca">Marca: </label>
+                        <input list="marcalist" tabindex="7" id="marca" name="marca" required>
+                        <datalist id="marcalist">
+                            <option value="specialized">
+                            <option value="trek">
+                            <option value="merida">
+                            <option value="scott">
+                            <option value="giant">
+                            <option value="cube">
+                            <option value="lapierre">
+                            <option value="orbea">
+                            <option value="cannondale">
+                            <option value="bmc">
+                            <option value="canyon">
+                            <option value="look">
+                            <option value="protek">
+                            <option value="megamo">
+                            <option value="pinarello">
+                            <option value="bianchi">
+                            <option value="bh">
+                            <option value="factor">
+                            <option value="ghost">
+                            <option value="cervélo">
+                            <option value="argon">
+                        </datalist>
+                    </div>
+                </fieldset>
+                
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+            </form>
+        </main>
+    </body>
+</html>

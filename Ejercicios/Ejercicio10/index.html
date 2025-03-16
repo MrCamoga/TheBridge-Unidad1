@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario de admisión</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Club Viejuners</h1>
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Tú</legend>
+                    <div>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" id="nombre" name="nombre" tabindex="1" placeholder="Nombre" autofocus required>
+                    </div>
+                    <div>
+                        <label for="apellidos">Apellidos: </label>
+                        <input type="text" id="apellidos" name="apellidos" tabindex="2" placeholder="Apellidos" required>
+                    </div>
+                    <div>
+                        <label for="edad">Edad: </label>
+                        <input type="number" id="edad" name="edad" min="65" max="130" tabindex="3" placeholder="Edad" required>
+                    </div>
+                    <div>
+                        Género: 
+                        <input type="radio" id="hombre" name="sexo" value="hombre" tabindex="4" required>
+                        <label for="hombre">Hombre<label>
+                        <input type="radio" id="mujer" name="sexo" value="mujer">
+                        <label for="mujer">Mujer</label>
+                        <input type="radio" id="otrosexo" name="sexo" value="otro">
+                        <label for="otrosexo">Otro</label>
+                        <input type="radio" id="nosexo" name="sexo" value="no">
+                        <label for="nosexo">No especificar</label>
+                    </div>
+                    <div>
+                        <label for="viejuner">Me siento viejuner: </label>
+                        <input type="checkbox" id="viejuner" name="viejuner" tabindex="5">
+                    </div>
+                    <label for="sobreti">Sobre ti: </label>
+                    <textarea id="sobreti" name="sobreti" maxlength="500" rows="10" tabindex="6" placeholder="Escribe algo sobre ti (max. 500 caracteres)"></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Información de contacto</legend>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" tabindex="7" placeholder="name@example.com" required>
+                    </div>
+                    <div>
+                        <label for="telefono">Telefono:</label>
+                        <input type="tel" id="telefono" name="telefono" tabindex="8" pattern="[679][0-9]{8}" placeholder="123456789" required>
+                    </div>
+                </fieldset>
+                <input type="reset" value="Borrar">
+                <input type="submit" value="Enviar">
+            </form>
+        </main>
+    </body>
+</html>
